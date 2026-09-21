@@ -1,132 +1,1826 @@
-<H1>PRAJAPATI SAREE FASHION</H1>
- 
-        <div class="card">
-            <img src="image for psf.png" alt="${saree.name}"
-            <p>Premium Quality</p>
-            <a href="https://wa.me, I want to order ${saree.name}" class="wa-btn">
-                <i class="fab fa-whatsapp"></i> WhatsApp Order
-            </a>
-        </div>
-    
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajapati Saree Fashion | Premium Catalogue</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <link rel="icon" type="image/png" href="PSF logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Burnfit Gym | Best Gym in Jaipur</title>
+<meta name="description" content="Burnfit Gym Jaipur - Strength Training, Cardio, Zumba, Yoga, CrossFit, Kickboxing, Personal Training, Sauna and more.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#ff2b2b;
+  --red2:#d90429;
+  --black:#070707;
+  --dark:#111;
+  --gray:#171717;
+  --light:#f5f5f5;
+  --white:#fff;
+  --muted:#aaa;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Poppins,sans-serif;
+  background:var(--black);
+  color:white;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+}
+
+.container{
+  width:min(1200px,90%);
+  margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  padding:18px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,.35);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  transition:.3s;
+}
+
+.navbar.scrolled{
+  background:rgba(0,0,0,.96);
+}
+
+.logo{
+  font-family:Oswald,sans-serif;
+  font-size:29px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.logo span{
+  color:var(--red);
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  align-items:center;
+  font-size:14px;
+  font-weight:600;
+}
+
+.nav-links a{
+  transition:.25s;
+}
+
+.nav-links a:hover{
+  color:var(--red);
+}
+
+.nav-cta{
+  background:var(--red);
+  padding:11px 20px;
+  border-radius:4px;
+}
+
+.nav-cta:hover{
+  color:white!important;
+  background:#ff4040;
+}
+
+.menu{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.97),rgba(0,0,0,.72),rgba(0,0,0,.25)),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,#070707 0%,transparent 30%);
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:min(1200px,90%);
+  margin:auto;
+  padding-top:80px;
+}
+
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  border-left:4px solid var(--red);
+  padding-left:14px;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-family:Oswald,sans-serif;
+  font-size:clamp(65px,10vw,130px);
+  line-height:.85;
+  text-transform:uppercase;
+  max-width:900px;
+}
+
+.hero h1 span{
+  color:var(--red);
+}
+
+.hero-text{
+  max-width:650px;
+  color:#ddd;
+  line-height:1.8;
+  margin:30px 0;
+  font-size:16px;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:15px 25px;
+  border-radius:4px;
+  font-weight:700;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.btn-red{
+  background:var(--red);
+  color:white;
+}
+
+.btn-red:hover{
+  background:white;
+  color:#111;
+  transform:translateY(-3px);
+}
+
+.btn-outline{
+  border:1px solid #777;
+  color:white;
+}
+
+.btn-outline:hover{
+  border-color:var(--red);
+  background:var(--red);
+}
+
+.hero-bottom{
+  display:flex;
+  gap:45px;
+  margin-top:55px;
+}
+
+.hero-stat strong{
+  display:block;
+  font-family:Oswald,sans-serif;
+  font-size:34px;
+}
+
+.hero-stat span{
+  color:#999;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+/* COMMON */
+
+section{
+  padding:100px 5%;
+}
+
+.section-head{
+  margin-bottom:55px;
+}
+
+.section-head.center{
+  text-align:center;
+}
+
+.section-head small{
+  color:var(--red);
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.section-head h2{
+  font-family:Oswald,sans-serif;
+  font-size:58px;
+  text-transform:uppercase;
+  line-height:1;
+  margin-top:10px;
+}
+
+.section-head p{
+  color:#999;
+  max-width:650px;
+  line-height:1.8;
+  margin-top:15px;
+}
+
+.center p{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* INTRO */
+
+.intro{
+  background:#0c0c0c;
+}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.intro-image{
+  height:570px;
+  overflow:hidden;
+  position:relative;
+}
+
+.intro-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(20%);
+}
+
+.intro-image::after{
+  content:"";
+  position:absolute;
+  inset:15px;
+  border:1px solid rgba(255,255,255,.3);
+  pointer-events:none;
+}
+
+.intro-content h2{
+  font-family:Oswald,sans-serif;
+  font-size:58px;
+  text-transform:uppercase;
+  line-height:1;
+  margin-bottom:22px;
+}
+
+.intro-content h2 span{
+  color:var(--red);
+}
+
+.intro-content p{
+  color:#aaa;
+  line-height:1.9;
+  margin-bottom:25px;
+}
+
+.check-list{
+  list-style:none;
+}
+
+.check-list li{
+  margin:13px 0;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:14px;
+}
+
+.check-list li span{
+  width:23px;
+  height:23px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:var(--red);
+  border-radius:50%;
+  font-size:12px;
+}
+
+/* SERVICES */
+
+.services{
+  background:#f5f5f5;
+  color:#111;
+}
+
+.services .section-head p{
+  color:#777;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.service{
+  min-height:190px;
+  padding:27px;
+  background:#fff;
+  border:1px solid #e7e7e7;
+  transition:.3s;
+  position:relative;
+  overflow:hidden;
+}
+
+.service::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  height:4px;
+  width:0;
+  background:var(--red);
+  transition:.3s;
+}
+
+.service:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
+.service:hover::before{
+  width:100%;
+}
+
+.service-icon{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.service h3{
+  font-family:Oswald,sans-serif;
+  font-size:23px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+
+.service p{
+  color:#777;
+  font-size:12px;
+  line-height:1.6;
+}
+
+/* CLASSES */
+
+.classes{
+  background:#080808;
+}
+
+.class-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.class-card{
+  position:relative;
+  height:300px;
+  overflow:hidden;
+  background:#222;
+}
+
+.class-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+  filter:brightness(.7);
+}
+
+.class-card:hover img{
+  transform:scale(1.08);
+  filter:brightness(.5);
+}
+
+.class-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:25px;
+  background:linear-gradient(transparent,rgba(0,0,0,.95));
+}
+
+.class-overlay h3{
+  font-family:Oswald,sans-serif;
+  font-size:31px;
+  text-transform:uppercase;
+}
+
+.class-overlay p{
+  color:#bbb;
+  font-size:12px;
+}
+
+/* EXPERIENCE */
+
+.experience{
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.78)),
+    url("https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=2000&q=85")
+    center/cover fixed;
+}
+
+.experience-box{
+  max-width:850px;
+}
+
+.experience-box h2{
+  font-family:Oswald,sans-serif;
+  font-size:70px;
+  text-transform:uppercase;
+  line-height:.95;
+}
+
+.experience-box h2 span{
+  color:var(--red);
+}
+
+.experience-box p{
+  color:#bbb;
+  line-height:1.9;
+  margin:25px 0;
+}
+
+.features-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin:35px 0;
+}
+
+.feature-small{
+  border:1px solid #333;
+  padding:20px;
+}
+
+.feature-small strong{
+  display:block;
+  color:var(--red);
+  font-family:Oswald,sans-serif;
+  font-size:27px;
+}
+
+.feature-small span{
+  color:#999;
+  font-size:11px;
+}
+
+/* GALLERY */
+
+.gallery{
+  background:#f4f4f4;
+  color:#111;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  grid-auto-rows:220px;
+  gap:12px;
+}
+
+.gallery-item{
+  overflow:hidden;
+  position:relative;
+}
+
+.gallery-item:first-child{
+  grid-row:span 2;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.06);
+}
+
+.gallery-item::after{
+  content:"VIEW";
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgba(255,43,43,.7);
+  opacity:0;
+  transition:.3s;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.gallery-item:hover::after{
+  opacity:1;
+}
+
+/* REVIEWS */
+
+.reviews{
+  background:#111;
+}
+
+.rating-box{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.rating-number{
+  font-family:Oswald,sans-serif;
+  font-size:80px;
+  color:white;
+  line-height:1;
+}
+
+.stars{
+  color:#ffc107;
+  font-size:25px;
+  letter-spacing:4px;
+}
+
+.rating-box p{
+  color:#777;
+  font-size:13px;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.review{
+  background:#181818;
+  border:1px solid #282828;
+  padding:28px;
+}
+
+.review-stars{
+  color:#ffc107;
+  margin-bottom:15px;
+}
+
+.review p{
+  color:#bbb;
+  font-size:13px;
+  line-height:1.8;
+}
+
+.review strong{
+  display:block;
+  margin-top:18px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#f4f4f4;
+  color:#111;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.contact-card{
+  background:white;
+  padding:35px;
+  border:1px solid #ddd;
+}
+
+.contact-card h3{
+  font-family:Oswald,sans-serif;
+  font-size:30px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+
+.contact-row{
+  display:flex;
+  gap:15px;
+  margin:20px 0;
+}
+
+.contact-icon{
+  width:45px;
+  height:45px;
+  flex:none;
+  background:#111;
+  color:var(--red);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.contact-row strong{
+  display:block;
+  margin-bottom:3px;
+}
+
+.contact-row span{
+  color:#777;
+  font-size:13px;
+  line-height:1.5;
+}
+
+.map{
+  width:100%;
+  height:100%;
+  min-height:400px;
+  border:0;
+}
+
+/* CTA */
+
+.cta{
+  padding:110px 5%;
+  text-align:center;
+  background:
+    linear-gradient(rgba(210,0,30,.88),rgba(120,0,15,.95)),
+    url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+}
+
+.cta h2{
+  font-family:Oswald,sans-serif;
+  font-size:70px;
+  text-transform:uppercase;
+  line-height:1;
+}
+
+.cta p{
+  max-width:650px;
+  margin:20px auto 30px;
+  color:#ffe5e5;
+  line-height:1.7;
+}
+
+.cta .btn-red{
+  background:#fff;
+  color:#111;
+}
+
+.cta .btn-red:hover{
+  background:#111;
+  color:#fff;
+}
+
+/* FOOTER */
+
+footer{
+  background:#050505;
+  padding:65px 5% 25px;
+}
+
+.footer-grid{
+  width:min(1200px,90%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:50px;
+}
+
+.footer-logo{
+  font-family:Oswald,sans-serif;
+  font-size:34px;
+  text-transform:uppercase;
+}
+
+.footer-logo span{
+  color:var(--red);
+}
+
+footer p{
+  color:#777;
+  font-size:13px;
+  line-height:1.8;
+  margin-top:15px;
+}
+
+footer h4{
+  font-family:Oswald,sans-serif;
+  font-size:22px;
+  text-transform:uppercase;
+  margin-bottom:15px;
+}
+
+.footer-links a{
+  display:block;
+  color:#888;
+  font-size:13px;
+  margin:11px 0;
+  transition:.2s;
+}
+
+.footer-links a:hover{
+  color:var(--red);
+}
+
+.socials{
+  display:flex;
+  gap:10px;
+  margin-top:22px;
+}
+
+.socials a{
+  width:43px;
+  height:43px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #333;
+  transition:.3s;
+  font-weight:800;
+}
+
+.socials a:hover{
+  background:var(--red);
+  border-color:var(--red);
+}
+
+.copyright{
+  width:min(1200px,90%);
+  margin:45px auto 0;
+  padding-top:20px;
+  border-top:1px solid #222;
+  text-align:center;
+  color:#555;
+  font-size:11px;
+}
+
+/* FLOATING WHATSAPP/CALL */
+
+.floating{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float-btn{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  box-shadow:0 8px 25px rgba(0,0,0,.4);
+}
+
+.call{
+  background:var(--red);
+}
+
+.whatsapp{
+  background:#19bd62;
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:75px;
+    left:5%;
+    width:90%;
+    background:#111;
+    padding:25px;
+    flex-direction:column;
+    gap:18px;
+    align-items:stretch;
+    border:1px solid #333;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .class-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .intro-grid{
+    grid-template-columns:1fr;
+  }
+
+  .intro-image{
+    height:450px;
+  }
+
+  .review-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:70px 5%;
+  }
+
+  .logo{
+    font-size:23px;
+  }
+
+  .hero{
+    min-height:850px;
+    background-position:center;
+  }
+
+  .hero h1{
+    font-size:65px;
+  }
+
+  .hero-bottom{
+    gap:20px;
+    flex-wrap:wrap;
+  }
+
+  .hero-stat strong{
+    font-size:28px;
+  }
+
+  .section-head h2,
+  .intro-content h2{
+    font-size:43px;
+  }
+
+  .service-grid,
+  .class-grid,
+  .features-row{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+    grid-auto-rows:180px;
+  }
+
+  .gallery-item:first-child{
+    grid-column:span 2;
+    grid-row:span 2;
+  }
+
+  .experience-box h2{
+    font-size:52px;
+  }
+
+  .cta h2{
+    font-size:48px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .buttons .btn{
+    width:100%;
+  }
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <p><i class="fa fa-map-marker-alt"></i> Sardarshahar, Churu, Rajasthan</p>
-        <p><i class="fa fa-phone"></i> +91 9929190370 | 7737864790</p>
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+
+  <a href="#home" class="logo">
+    BURN<span>FIT</span>
+  </a>
+
+  <div class="menu" id="menu">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#classes">Classes</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+918290601516" class="nav-cta">JOIN NOW</a>
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="hero-tag">
+      Jaipur's Fitness Destination
     </div>
 
-    <nav class="navbar">
-        <div class="container flex justify-between items-center">
-            <div class="logo">Prajapati <span>Saree Fashion</span></div>
-            <ul class="nav-menu hidden md:flex">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#products">New Arrivals</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <h1>
+      BUILD<br>
+      <span>YOUR</span><br>
+      BEAST
+    </h1>
 
-    <!-- Large Hero Section -->
-    <section id="home" class="big-hero">
-        <div class="hero-overlay">
-            <h1 class="fade-in">Prajapati Saree Fashion</h1>
-            <p class="fade-in-delayed">राजस्थानी परंपरा और आधुनिक डिजाइन का संगम</p>
-            <div class="hero-btns">
-                <a href="#products" class="btn-gold">Shop Now</a>
-                <a href="https://wa.me" class="btn-outline">WhatsApp Chat</a>
-            </div>
-        </div>
-    </section>
+    <p class="hero-text">
+      Train harder. Move stronger. Live better.
+      Burnfit Gym brings strength training, cardio, group fitness,
+      personal training and recovery facilities together under one roof.
+    </p>
 
-    <!-- Why Choose Us (Features) -->
-    <section class="features container">
-        <div class="feature-item">
-            <i class="fa fa-gem"></i>
-            <h3>Premium Quality</h3>
-            <p>100% Genuine Fabrics</p>
-        </div>
-        <div class="feature-item">
-            <i class="fa fa-truck"></i>
-            <h3>Fast Delivery</h3>
-            <p>Direct from Sardarshahar</p>
-        </div>
-        <div class="feature-item">
-            <i class="fa fa-tags"></i>
-            <h3>Best Prices</h3>
-            <p>Wholesale Rates</p>
-        </div>
-    </section>
+    <div class="buttons">
 
-    <!-- Detailed Categories -->
-    <section id="categories" class="container">
-        <h2 class="section-title">Shop by Category</h2>
-        <div class="category-grid">
-            <div class="cat-card" style="background-image: url('https://unsplash.com')"><span>Silk Sarees</span></div>
-            <div class="cat-card" style="background-image: url('https://unsplash.com')"><span>Bridal Wear</span></div>
-            <div class="cat-card" style="background-image: url('https://unsplash.com')"><span>Cotton Daily</span></div>
-            <div class="cat-card" style="background-image: url('https://unsplash.com')"><span>Party Wear</span></div>
-        </div>
-    </section>
+      <a href="tel:+918290601516" class="btn btn-red">
+        📞 CALL NOW
+      </a>
 
-    <!-- Product Section -->
-    <section id="products" class="container">
-        <h2 class="section-title">TRENDING ONE'S</h2>
-        <h3>white zari cheacked</h3>
-        <h3>pila zari cheacked </h3>
-        <h3>multi colour chunadi </h3>
-        <h3>Swastik border</h3>
-        <h3>Chundi gota work</h3>
-        <h2>contac us on +919929190370/+917737864790 for photos</h2>
-        <div class="product-grid" id="productGrid">
-            <!-- Loaded by PSF.js (8-12 Products) -->
-        </div>
-    </section>
+      <a href="#services" class="btn btn-outline">
+        EXPLORE SERVICES
+      </a>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container text-center">
-            <h2 class="section-title text-white">What Our Customers Say</h2>
-            <div class="review-box">
-                <p>"Best quality sarees in Sardarshahar. Bahut hi sundar collection hai!"</p>
-                <span>- Sunita Devi</span>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- Footer & Contact -->
-    <footer id="contact" class="footer">
-        <div class="container grid md:grid-cols-3 gap-8">
-            <div>
-                <h3>Prajapati Saree</h3>
-                <p>Near Toliyasar Bheruji Mandir, Parik Tower Gali,bherav katla, Sardarshahar, Churu (Raj.)</p>
-            </div>
-            <div>
-                <h3>Shop on Meesho</h3>
-                <p>Search Code: <span class="meesho-code">S-858862188</span></p>
-            </div>
-            <div>
-                <h3>Instagram</h3>
-                <p>@prajapati_saree_fashion</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2024 Crafted by PSF | Owner: Lalit Kumar Prajapat
-        </div>
-    </footer>
+    <div class="hero-bottom">
 
-    <script src="PSF.js"></script>
+      <div class="hero-stat">
+        <strong>4.8★</strong>
+        <span>Google Rating</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>248+</strong>
+        <span>Google Reviews</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>10 PM</strong>
+        <span>Closing Time</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="intro" id="about">
+
+  <div class="container intro-grid">
+
+    <div class="intro-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1200&q=85"
+        alt="Burnfit Gym workout">
+
+    </div>
+
+    <div class="intro-content">
+
+      <div class="section-head">
+        <small>About Burnfit</small>
+      </div>
+
+      <h2>
+        TRAIN WITH<br>
+        <span>PURPOSE.</span>
+      </h2>
+
+      <p>
+        Burnfit Gym is a fitness destination in Gopal Pura Mode,
+        Jaipur, offering a combination of strength training,
+        cardio, group fitness classes, yoga and personal training.
+      </p>
+
+      <p>
+        Whether your goal is building strength, improving stamina,
+        losing weight, gaining weight or simply becoming fitter,
+        Burnfit offers multiple ways to train.
+      </p>
+
+      <ul class="check-list">
+
+        <li>
+          <span>✓</span>
+          Strength & Weight Training
+        </li>
+
+        <li>
+          <span>✓</span>
+          Cardio & Endurance Training
+        </li>
+
+        <li>
+          <span>✓</span>
+          Zumba, Yoga & Dance Fitness
+        </li>
+
+        <li>
+          <span>✓</span>
+          Personal Training
+        </li>
+
+        <li>
+          <span>✓</span>
+          Sauna & Shower Facilities
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <small>What We Offer</small>
+
+      <h2>Train Your Way</h2>
+
+      <p>
+        Choose from a wide range of fitness services and classes
+        according to your goals.
+      </p>
+
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service">
+        <div class="service-icon">🏋️</div>
+        <h3>Weight Training</h3>
+        <p>Build strength, muscle and power with resistance training.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🔥</div>
+        <h3>HIIT</h3>
+        <p>High-intensity workouts designed to challenge your body.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🥊</div>
+        <h3>Kickboxing</h3>
+        <p>Improve fitness, coordination, stamina and conditioning.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">⚡</div>
+        <h3>CrossFit</h3>
+        <p>Functional movements and challenging full-body workouts.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">💃</div>
+        <h3>Zumba</h3>
+        <p>Dance-based fitness sessions packed with energy.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🧘</div>
+        <h3>Yoga</h3>
+        <p>Improve flexibility, balance, mobility and mindfulness.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🚴</div>
+        <h3>Cardio</h3>
+        <p>Improve cardiovascular endurance and stamina.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🎯</div>
+        <h3>Personal Training</h3>
+        <p>Individual training focused on your specific fitness goals.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🏊</div>
+        <h3>Swimming</h3>
+        <p>Swimming and fitness-focused aquatic training options.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🧖</div>
+        <h3>Sauna</h3>
+        <p>Relax and recover after your training session.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🧘‍♂️</div>
+        <h3>Pilates</h3>
+        <p>Work on movement, flexibility, control and core strength.</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🥗</div>
+        <h3>Nutrition</h3>
+        <p>Nutrition consulting to support your fitness journey.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CLASSES -->
+<section class="classes" id="classes">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <small>Group Fitness</small>
+
+      <h2>More Than A Gym</h2>
+
+      <p>
+        Mix up your training with group classes and fitness activities.
+      </p>
+
+    </div>
+
+    <div class="class-grid">
+
+      <div class="class-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1000&q=85"
+          alt="Strength training">
+
+        <div class="class-overlay">
+          <h3>Strength</h3>
+          <p>Build muscle. Build confidence.</p>
+        </div>
+
+      </div>
+
+      <div class="class-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=85"
+          alt="Aerobics class">
+
+        <div class="class-overlay">
+          <h3>Aerobics</h3>
+          <p>Move more. Feel better.</p>
+        </div>
+
+      </div>
+
+      <div class="class-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=85"
+          alt="Personal training">
+
+        <div class="class-overlay">
+          <h3>Personal Training</h3>
+          <p>Training designed around you.</p>
+        </div>
+
+      </div>
+
+      <div class="class-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=85"
+          alt="Gym workout">
+
+        <div class="class-overlay">
+          <h3>Weight Training</h3>
+          <p>Get stronger every session.</p>
+        </div>
+
+      </div>
+
+      <div class="class-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=1000&q=85"
+          alt="Yoga">
+
+        <div class="class-overlay">
+          <h3>Yoga</h3>
+          <p>Strength. Balance. Flexibility.</p>
+        </div>
+
+      </div>
+
+      <div class="class-card">
+
+        <img
+          src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?auto=format&fit=crop&w=1000&q=85"
+          alt="Fitness class">
+
+        <div class="class-overlay">
+          <h3>Group Fitness</h3>
+          <p>Train together. Push further.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+<section class="experience">
+
+  <div class="container">
+
+    <div class="experience-box">
+
+      <div class="section-head">
+        <small>The Burnfit Difference</small>
+      </div>
+
+      <h2>
+        DON'T JUST<br>
+        <span>WORK OUT.</span><br>
+        LEVEL UP.
+      </h2>
+
+      <p>
+        From strength and weight training to cardio, yoga,
+        Zumba, kickboxing and personal training, Burnfit gives
+        members multiple ways to keep their fitness journey challenging.
+      </p>
+
+      <div class="features-row">
+
+        <div class="feature-small">
+          <strong>4.8★</strong>
+          <span>GOOGLE RATING</span>
+        </div>
+
+        <div class="feature-small">
+          <strong>248+</strong>
+          <span>REVIEWS</span>
+        </div>
+
+        <div class="feature-small">
+          <strong>10 PM</strong>
+          <span>CLOSING TIME</span>
+        </div>
+
+      </div>
+
+      <a href="tel:+918290601516" class="btn btn-red">
+        START YOUR FITNESS JOURNEY
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <small>Inside Burnfit</small>
+
+      <h2>Gym Gallery</h2>
+
+      <p>
+        Get a feel for the training atmosphere.
+      </p>
+
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85"
+          alt="Gym interior">
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=85"
+          alt="Gym workout">
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1000&q=85"
+          alt="Strength training">
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1000&q=85"
+          alt="Fitness training">
+      </div>
+
+      <div class="gallery-item">
+        <img
+          src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1000&q=85"
+          alt="Weight training">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <small>Member Feedback</small>
+
+      <h2>Rated By Members</h2>
+
+    </div>
+
+    <div class="rating-box">
+
+      <div class="rating-number">4.8</div>
+
+      <div class="stars">★★★★★</div>
+
+      <p>248 Google Reviews</p>
+
+    </div>
+
+    <div class="review-grid">
+
+      <div class="review">
+
+        <div class="review-stars">★★★★★</div>
+
+        <p>
+          A highly rated fitness destination with a wide variety
+          of training options and classes.
+        </p>
+
+        <strong>Google Member</strong>
+
+      </div>
+
+      <div class="review">
+
+        <div class="review-stars">★★★★★</div>
+
+        <p>
+          Members highlight the supportive environment, trainers,
+          equipment and range of fitness activities.
+        </p>
+
+        <strong>Google Member</strong>
+
+      </div>
+
+      <div class="review">
+
+        <div class="review-stars">★★★★★</div>
+
+        <p>
+          A place offering strength training along with yoga,
+          Zumba, cardio and other fitness activities.
+        </p>
+
+        <strong>Google Member</strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="section-head center">
+
+      <small>Find Burnfit</small>
+
+      <h2>Come Train With Us</h2>
+
+      <p>
+        Visit Burnfit Gym at Gopal Pura Mode, Jaipur.
+      </p>
+
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <h3>Contact Details</h3>
+
+        <div class="contact-row">
+
+          <div class="contact-icon">📍</div>
+
+          <div>
+            <strong>Address</strong>
+            <span>
+              Plot No. A-7, Behind Mehta Book Depo,
+              Telephone Colony, Bank Colony,
+              Gopal Pura Mode, Jaipur,
+              Rajasthan 302015
+            </span>
+          </div>
+
+        </div>
+
+        <div class="contact-row">
+
+          <div class="contact-icon">📞</div>
+
+          <div>
+            <strong>Phone</strong>
+            <span>082906 01516</span>
+          </div>
+
+        </div>
+
+        <div class="contact-row">
+
+          <div class="contact-icon">🕙</div>
+
+          <div>
+            <strong>Opening Hours</strong>
+            <span>
+              Listed closing time: 10:00 PM
+            </span>
+          </div>
+
+        </div>
+
+        <div class="contact-row">
+
+          <div class="contact-icon">✨</div>
+
+          <div>
+            <strong>Facilities</strong>
+            <span>
+              Sauna · Shower · Online Classes
+            </span>
+          </div>
+
+        </div>
+
+        <div class="buttons">
+
+          <a
+            href="tel:+918290601516"
+            class="btn btn-red">
+            📞 CALL BURNFIT
+          </a>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Burnfit+Gym+Plot+A-7+Gopal+Pura+Mode+Jaipur"
+            target="_blank"
+            class="btn"
+            style="background:#111;color:white;">
+            📍 GET DIRECTIONS
+          </a>
+
+        </div>
+
+      </div>
+
+      <iframe
+        class="map"
+        title="Burnfit Gym Jaipur Map"
+        src="https://www.google.com/maps?q=Burnfit%20Gym%20Gopal%20Pura%20Mode%20Jaipur&output=embed"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+  <h2>YOUR TIME IS NOW.</h2>
+
+  <p>
+    Stop waiting for the perfect day.
+    Start training today and take the next step toward your goals.
+  </p>
+
+  <div class="buttons" style="justify-content:center;">
+
+    <a href="tel:+918290601516" class="btn btn-red">
+      📞 CALL NOW
+    </a>
+
+    <a
+      href="https://www.instagram.com/burnfit_gym/"
+      target="_blank"
+      class="btn btn-outline">
+      ◎ FOLLOW ON INSTAGRAM
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-grid">
+
+    <div>
+
+      <div class="footer-logo">
+        BURN<span>FIT</span>
+      </div>
+
+      <p>
+        Fitness. Strength. Discipline.
+        Burnfit Gym, Gopal Pura Mode, Jaipur.
+      </p>
+
+      <div class="socials">
+
+        <a
+          href="https://www.instagram.com/burnfit_gym/"
+          target="_blank"
+          aria-label="Instagram">
+          ◎
+        </a>
+
+        <a
+          href="https://www.facebook.com/search/pages/?q=Burnfit%20Gym%20Jaipur"
+          target="_blank"
+          aria-label="Facebook">
+          f
+        </a>
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Burnfit+Gym+Gopal+Pura+Mode+Jaipur"
+          target="_blank"
+          aria-label="Google Maps">
+          📍
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-links">
+
+      <h4>Quick Links</h4>
+
+      <a href="#home">Home</a>
+      <a href="#about">About Burnfit</a>
+      <a href="#services">Services</a>
+      <a href="#classes">Classes</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+
+    </div>
+
+    <div>
+
+      <h4>Contact</h4>
+
+      <p>
+        📍 Plot No. A-7,<br>
+        Behind Mehta Book Depo,<br>
+        Telephone Colony, Bank Colony,<br>
+        Gopal Pura Mode, Jaipur 302015
+      </p>
+
+      <p>
+        📞 082906 01516
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 Burnfit Gym Jaipur. All Rights Reserved.
+  </div>
+
+</footer>
+
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating">
+
+  <a
+    href="https://wa.me/918290601516"
+    target="_blank"
+    class="float-btn whatsapp"
+    aria-label="WhatsApp">
+    ☘
+  </a>
+
+  <a
+    href="tel:+918290601516"
+    class="float-btn call"
+    aria-label="Call">
+    📞
+  </a>
+
+</div>
+
+
+<script>
+
+/* NAVBAR */
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll",function(){
+
+  if(window.scrollY > 50){
+    navbar.classList.add("scrolled");
+  }else{
+    navbar.classList.remove("scrolled");
+  }
+
+});
+
+
+/* MOBILE MENU */
+
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click",function(){
+
+  navLinks.classList.toggle("active");
+
+});
+
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+  link.addEventListener("click",function(){
+    navLinks.classList.remove("active");
+  });
+
+});
+
+
+/* REVEAL ANIMATION */
+
+const elements = document.querySelectorAll(
+  ".service,.class-card,.review,.contact-card,.gallery-item,.intro-image,.intro-content"
+);
+
+const observer = new IntersectionObserver(function(entries){
+
+  entries.forEach(function(entry){
+
+    if(entry.isIntersecting){
+
+      entry.target.style.opacity="1";
+      entry.target.style.transform="translateY(0)";
+
+    }
+
+  });
+
+},{
+  threshold:.1
+});
+
+
+elements.forEach(function(element){
+
+  element.style.opacity="0";
+  element.style.transform="translateY(25px)";
+  element.style.transition="opacity .7s ease, transform .7s ease";
+
+  observer.observe(element);
+
+});
+
+</script>
+
 </body>
 </html>
